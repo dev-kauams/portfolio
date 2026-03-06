@@ -44,12 +44,6 @@ h1 {
 }
 
 a {
-  color: var(--purple-main);
   text-decoration: none;
   transition: 0.3s;
-}
-
-a:hover {
-  color: var(--purple-glow);
-  text-shadow: 0 0 10px var(--purple-glow); /* Brilho suave no hover */
 }
