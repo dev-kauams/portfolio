@@ -5,7 +5,7 @@ navSections.addEventListener('mouseenter', () => {
 })
 
 navSections.addEventListener('mouseleave', () => {
-    navSections.style.opacity = "0.1"
+    navSections.style.opacity = "0.4"
 })
 
 
@@ -25,7 +25,7 @@ function moveBar(link) {
 }
 
 
-// detecta seção visível
+
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
@@ -45,7 +45,7 @@ const observer = new IntersectionObserver(entries => {
     })
 
 }, {
-    threshold: 0.6
+    threshold: 0.75
 })
 
 
