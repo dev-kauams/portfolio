@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="preset.css">
-    <title>Portfolio</title>
+    <title>Kauã Mariano</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav-sections">
             <a href="#home">Home</a>
             <a href="#about">Sobre Mim</a>
             <a href="#projects">Projetos</a>
             <a href="#contact">Contato</a>
+            <div class="selection-bar"></div>
+        </nav>
+
+        <nav class="nav-themes">
+            <div class="mode-radio">
+                <label for="darkMode" class="dark-mode">
+                    <figure><img src="assets/icons/dark_mode.svg" alt=""></figure>
+                    <input type="radio" name="themeSelection" id="darkMode">
+                </label>
+                <label for="darkMode" class="light-mode">
+                    <figure><img src="assets/icons/light_mode.svg" alt=""></figure>
+                    <input type="radio" name="themeSelection" id="lightMode">  
+                </label>
+            </div>
         </nav>
     </header>
 
@@ -22,7 +36,7 @@
             <h1>I'm Kauã Mariano</h1>
             <p>Web Developer</p>
 
-            <button>Baixar CV</button>
+            <button class="cv-button">Baixar CV</button>
         </section>
         <section class="" id="about">
             <h2>Sobre Mim</h2>
