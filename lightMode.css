@@ -1,0 +1,104 @@
+:root {
+    --purple-main: #9b59b6;
+    --purple-dark: #8e44ad;
+    --text-body: #343a40;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --text-color: #212529;
+    --h-color: #343a40;
+}
+
+body.light-mode {
+    background-image: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: url('assets/bg_body.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    image-rendering: high-quality;
+}
+
+body.light-mode::before {
+    backdrop-filter: blur(10px) brightness(100%);
+    filter: invert(0.7);
+
+}
+
+body.light-mode header nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-color);
+}
+
+body.light-mode header nav a {
+    color: var(--purple-main);
+}
+
+body.light-mode header nav a.active {
+    color: var(--purple-dark);
+}
+
+body.light-mode .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+body.light-mode .card:hover {
+    border: 1px solid var(--purple-main);
+    box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+    color: var(--h-color);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+body.light-mode #home .cv-button {
+    color: #fff;
+}
+
+body.light-mode #home .cv-button:hover {
+    color: var(--purple-dark);
+}
+
+body.light-mode #about .card-about {
+    color: var(--text-body);
+}
+
+body.light-mode #skills .icon-skill {
+    background-color: var(--purple-main);
+}
+
+body.light-mode #skills .card-skills:hover .icon-skill {
+    background-color: var(--purple-dark);
+}
+
+body.light-mode #projects .card-projects::after {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+body.light-mode #contact .card-contact {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+body.light-mode #contact .card-contact:hover p {
+    color: var(--purple-main);
+}
+
+body.light-mode #contact .img-contact {
+    filter: none;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightMode.css">
     <link rel="stylesheet" href="preset.css">
     <title>Kauã Mariano</title>
 </head>
@@ -84,59 +85,88 @@
         <section class="" id="projects">
             <h2>Projetos</h2>
             <div class="container-projects">
-                <div class="card card-projects">
+                <div
+                class="card card-projects"
+                data-tooltip="HTML, CSS e JS"
+                onclick="window.open('https://dev-kauams.github.io/bs-components/', '_blank')"
+                style="cursor: pointer;"
+                >
                     <img src="assets/projects/image-bootstrap.png" alt="Projeto">
-                    <div class="tag-projects">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <h3>Projeto</h3>
-                    <p>blá blá blá...</p>
+                    <h3>Componentes BootStrap</h3>
+                    <p>Aqui demonstro alguns dos principais componentes do BootStrap.</p>
                 </div>
-                <div class="card card-projects">
-                    <img src="" alt="Projeto">
-                    <div class="tag-projects">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <h3>Projeto</h3>
-                    <p>blá blá blá...</p>
+                <div 
+                class="card card-projects"
+                data-tooltip="HTML e CSS"v
+                onclick="window.open('https://dev-kauams.github.io/bs-components/', '_blank')"
+                >
+                    <img src="assets/projects/image-expomoto.png" alt="Projeto">
+                    <h3>ExpoMoto</h3>
+                    <p>Uma Landing Page de um evento de motos com diversas tecnologias.</p>
                 </div>
-                <div class="card card-projects">
-                    <img src="" alt="Projeto">
-                    <div class="tag-projects">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <h3>Projeto</h3>
-                    <p>blá blá blá...</p>
+                <div 
+                class="card card-projects" 
+                data-tooltip="HTML, CSS, JS, React e Flutter"
+                >
+                    <img src="assets/projects/image-em-producao.png" alt="Projeto">
+                    <h3>Guru's Learn</h3>
+                    <p>Projeto surreal que revolucionará o sistema educacional online.</p>
                 </div>
             </div>
         </section>
         <section id="contact">
             <h2>Redes Sociais</h2>
             <div class="container-contact">
-                <div class="card card-contact">
+                <div
+                class="card card-contact"
+                onclick="window.open('https://github.com/dev-kauams', '_blank')"
+                >
                     <img class="img-contact" src="assets/icons/github.png" alt="Ícone do GitHub">
-                    <a href="">GitHub</a>
+                    <p>GitHub</p>
                 </div>
-                <div class="card card-contact">
-                    <img class="img-contact" src="assets/icons/linkedin.png" alt="Ícone do LinkedIn">
-                    <a href="">LinkedIn</a>
-                </div>
-                <div class="card card-contact">
+                <div
+                class="card card-contact"
+                onclick="window.open('https://www.linkedin.com/in/dev-kauams/', '_blank')"
+                >
+                <img class="img-contact" src="assets/icons/linkedin.png" alt="Ícone do LinkedIn">
+                <p>LinkedIn</p>
+            </div>
+            <div 
+            class="card card-contact"
+            onclick="window.open('https://www.instagram.com/_kaua.ms_/', '_blank')"
+            >
                     <img class="img-contact" src="assets/icons/instagram.png" alt="Ícone do Instagram">
-                    <a href="">Instagram</a>
+                    <p>Instagram</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
+        <div class="footer-container">
 
+            <h2>Let's work together</h2>
+            <p>Tem uma ideia ou projeto? Me envie uma mensagem.</p>
+
+            <form class="footer-form">
+
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Seu nome" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" rows="4" placeholder="Sua mensagem..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar mensagem</button>
+
+            </form>
+
+        </div>
     </footer>
 
     <script src="script.js"></script>

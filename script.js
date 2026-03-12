@@ -51,3 +51,40 @@ const observer = new IntersectionObserver(entries => {
 
 // observar todas as sections
 sections.forEach(section => observer.observe(section))
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeSwitchers = document.querySelectorAll('input[name="themeSelection"]');
+    const body = document.body;
+
+    const setTheme = (theme) => {
+        if (theme === 'light') {
+            body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
+        }
+    };
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        setTheme(currentTheme);
+        const currentRadio = document.getElementById(currentTheme + 'Mode');
+        if(currentRadio) {
+            currentRadio.checked = true;
+        }
+    } else {
+        // Default to dark mode if no theme is set
+        const darkRadio = document.getElementById('darkMode');
+        if(darkRadio) {
+            darkRadio.checked = true;
+        }
+    }
+
+    themeSwitchers.forEach(switcher => {
+        switcher.addEventListener('change', function() {
+            setTheme(this.id.replace('Mode', ''));
+        });
+    });
+});
