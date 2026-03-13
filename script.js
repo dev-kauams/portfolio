@@ -1,11 +1,18 @@
 const navSections = document.querySelector('.nav-sections')
+
+const ProfilePic = document.getElementById('profilePic')
 // NAV OPACITY
 navSections.addEventListener('mouseenter', () => {
     navSections.style.opacity = "1"
 })
 
 navSections.addEventListener('mouseleave', () => {
-    navSections.style.opacity = "0.4"
+    if(body.classList.contains('light-mode')){
+        navSections.style.opacity = "1"
+
+    } else {
+        navSections.style.opacity = "0.4"
+    }
 })
 
 
@@ -53,19 +60,35 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => observer.observe(section))
 
 
+const body = document.body;
 document.addEventListener('DOMContentLoaded', () => {
-    const themeSwitchers = document.querySelectorAll('input[name="themeSelection"]');
-    const body = document.body;
-
+    const themeSwitchers = document.querySelectorAll('input[name="themeSelection"]')
     const setTheme = (theme) => {
         if (theme === 'light') {
             body.classList.add('light-mode');
             localStorage.setItem('theme', 'light');
+            profilePic.src = "assets/profile-pic-LM.png"
         } else {
             body.classList.remove('light-mode');
             localStorage.setItem('theme', 'dark');
+            profilePic.src = "assets/profile-pic.png"
         }
-    };
+    }
+
+    document.addEventListener('keydown', (event) =>{
+        if(event.shiftKey && event.key.toLowerCase() === 't'){
+            const isLight = body.classList.contains('light-mode')
+
+            if (isLight){
+                setTheme('dark')
+                document.getElementById('darkMode').checked = true
+            }else{
+                setTheme('light')
+                document.getElementById('lightMode').checked = true
+            }
+        } 
+    })
+
 
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
@@ -75,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
             currentRadio.checked = true;
         }
     } else {
-        // Default to dark mode if no theme is set
         const darkRadio = document.getElementById('darkMode');
         if(darkRadio) {
             darkRadio.checked = true;

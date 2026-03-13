@@ -1,28 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Delius&family=Lexend:wght@100..900&family=Michroma&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
-:root {
-  /* Backgrounds */
-  --bg-dark: #0a0a0c;       /* Fundo principal */
-  --bg-card: #16161a;       /* Fundo de cards/seções */
-  
-  /* Purples */
-  --purple-main: #8b5cf6;   /* Roxo vibrante (estilo Tailwind) */
-  --purple-glow: #a855f7;   /* Para hover e efeitos de brilho */
-  --purple-dark: #4c1d95;   /* Para detalhes mais discretos */
-  
-  /* Texts */
-  --text-title: #ffffff;    /* Branco puro para títulos */
-  --text-body: #a1a1aa;     /* Cinza claro para leitura longa (evita cansaço) */
-  --text-muted: #71717a;    /* Para datas ou textos secundários */
-
-  /* Fonts */
-
-  /* Accents */
-  --border-color: #27272a;  /* Bordas sutis nos cards */
-  --selection-bg: #8b5cf644; /* Cor de fundo ao selecionar texto */
-}
 
 body {
   background-color: var(--bg-dark);

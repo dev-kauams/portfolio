@@ -1,13 +1,14 @@
-:root {
-    --purple-main: #9b59b6;
-    --purple-dark: #8e44ad;
-    --text-body: #343a40;
+.light-mode {
+    --color-main: #2ecc71; 
+    --color-dark: #27ae60;
+
+    --text-body: #2c3e50;
     --border-color: rgba(0, 0, 0, 0.1);
-    --bg-color: #f8f9fa;
+    --bg-color: #f4fff7;      
     --card-bg: #ffffff;
     --card-shadow: rgba(0, 0, 0, 0.1);
-    --text-color: #212529;
-    --h-color: #343a40;
+    --text-color: #1e2a23;
+    --h-color: #2cfe83;
 }
 
 body.light-mode {
@@ -23,32 +24,53 @@ body.light-mode {
 }
 
 body.light-mode::before {
-    backdrop-filter: blur(10px) brightness(100%);
-    filter: invert(0.7);
+    content: '';
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(10px) brightness(70%) invert(100%);
+    z-index: -1;
+}
 
+body.light-mode header {
+        background: radial-gradient(
+        ellipse 150% 100% at top,
+        #1d1d1d 10%,
+        #121212db 20%,
+        rgba(0,0,0,0.65) 45%,
+        rgba(0,0,0,0.25) 70%,
+        rgba(0,0,0,0) 100%
+        )
 }
 
 body.light-mode header nav {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-main);
+}
+
+body.light-mode header .nav-themes img {
+    filter: invert(1);
 }
 
 body.light-mode header nav a {
-    color: var(--purple-main);
+    color: var(--color-main);
 }
 
 body.light-mode header nav a.active {
-    color: var(--purple-dark);
+    color: var(--color-dark);
 }
 
 body.light-mode .card {
-    background: var(--card-bg);
+    background: #ffffff49;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 6px var(--card-shadow);
+
+    & p{
+        font-family: 'Lexend';
+    }
 }
 
 body.light-mode .card:hover {
-    border: 1px solid var(--purple-main);
+    border: 1px solid var(--color-main);
     box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
 }
 
@@ -69,7 +91,7 @@ body.light-mode #home .cv-button {
 }
 
 body.light-mode #home .cv-button:hover {
-    color: var(--purple-dark);
+    color: var(--color-dark);
 }
 
 body.light-mode #about .card-about {
@@ -77,11 +99,11 @@ body.light-mode #about .card-about {
 }
 
 body.light-mode #skills .icon-skill {
-    background-color: var(--purple-main);
+    background-color: var(--color-main);
 }
 
 body.light-mode #skills .card-skills:hover .icon-skill {
-    background-color: var(--purple-dark);
+    background-color: var(--color-dark);
 }
 
 body.light-mode #projects .card-projects::after {
@@ -96,9 +118,28 @@ body.light-mode #contact .card-contact {
 }
 
 body.light-mode #contact .card-contact:hover p {
-    color: var(--purple-main);
+    color: var(--color-main);
 }
 
 body.light-mode #contact .img-contact {
     filter: none;
+}
+
+body.light-mode footer {
+    background: radial-gradient(
+    ellipse 120% 80% at bottom,
+    #fff 0%,
+    #73f57c 10%,
+    var(--color-main) 20%,
+    rgba(0,0,0,0.65) 45%,
+    rgba(0,0,0,0.25) 70%,
+    rgba(0,0,0,0) 100%
+    ),
+    linear-gradient(
+        to top,
+        #000 0%,
+        rgba(0,0,0,0.85) 20%,
+        rgba(0,0,0,0.35) 40%,
+        transparent 65%
+    );  
 }
