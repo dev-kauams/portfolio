@@ -137,15 +137,23 @@ body {
                     align-items: center;
                     justify-content: center;
                     background-color: transparent;
+ 
                     padding: 0 0.8rem;
                     height: 100%;
                     width: auto;
                     backdrop-filter: blur(25px);
+                    transition: all 0.3s ease;
+
+                    &:hover{
+                        background-color: #696969;
+                    }
                 }
 
                 & input {
                     opacity: 0;
                     position: absolute;
+                    height: 100%;
+                    width: 100%;
                 }
 
                 & figure {
@@ -227,7 +235,31 @@ body {
             font-size: 2rem;
             margin-bottom: 2rem;
             font-family: "Press Start 2P";
+            position: relative;
+
+
+            & #textWrite{
+                position: relative;
+                font-style: italic;
+                color: var(--color-dark);
+                text-shadow: 0 0 10px var(--color-dark);
+
+                &::after{
+                    content: '';
+                    height: 120%;
+                    width: 3px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    background-color: #fff;
+                    transform: translateX(5px) translateY(-50%) rotate(10deg);
+                    z-index: 99;
+                    animation: writer 0.3s infinite;
+                }
+            }
         }
+
+
 
         & .cv-button {
             padding: 1.2rem 0;
@@ -576,6 +608,7 @@ body {
                         color: white;
                         font-family: inherit;
                         transition: border 0.2s, box-shadow 0.2s;
+                        resize: none;
 
                         &::placeholder {
                             color: rgba(255,255,255,0.5);
@@ -1104,3 +1137,11 @@ RESPONSIVIDADE - TELAS MUITO GRANDES (>1440px)
 }
 
 
+@keyframes writer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -86,12 +86,16 @@ body.light-mode h6 {
     -webkit-text-fill-color: unset;
 }
 
+body.light-mode #home p #textWrite::after{
+    background-color: #000;
+}
+
 body.light-mode #home .cv-button {
     color: #fff;
 }
 
 body.light-mode #home .cv-button:hover {
-    color: var(--color-dark);
+    color: #000;
 }
 
 body.light-mode #about .card-about {
@@ -103,7 +107,7 @@ body.light-mode #skills .icon-skill {
 }
 
 body.light-mode #skills .card-skills:hover .icon-skill {
-    background-color: var(--color-dark);
+    background-color: #000;
 }
 
 body.light-mode #projects .card-projects::after {

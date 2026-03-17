@@ -1,7 +1,53 @@
+const words = [
+    "Web Developer",
+    "Mobile Developer",
+    "Designer UX/UI"
+]
+
+let wordIndex = 0
+let letterIndex = 0
+let currentWord = ""
+let isDeleting = false
+
+const textElement = document.getElementById("textWrite")
+
+function typeEffect() {
+
+    currentWord = words[wordIndex]
+
+    if (isDeleting) {
+        letterIndex--
+    } else {
+        letterIndex++
+    }
+
+    textElement.textContent = currentWord.substring(0, letterIndex)
+
+    if (!isDeleting && letterIndex === currentWord.length) {
+
+        setTimeout(() => isDeleting = true, 1200)
+
+    } else if (isDeleting && letterIndex === 0) {
+
+        isDeleting = false
+        wordIndex++
+
+        if (wordIndex === words.length) {
+            wordIndex = 0
+        }
+
+    }
+
+    setTimeout(typeEffect, isDeleting ? 50 : 100)
+}
+
+typeEffect()
+
+
 const navSections = document.querySelector('.nav-sections')
 
 const ProfilePic = document.getElementById('profilePic')
-// NAV OPACITY
+
 navSections.addEventListener('mouseenter', () => {
     navSections.style.opacity = "1"
 })
