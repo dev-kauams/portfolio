@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Lexend:wght@100..900&family=Michroma&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+
+  --bg-dark: #0a0a0c;
+  --bg-card: #16161a;
+
+  --color-main: #8b5cf6;
+  --color-glow: #a855f7;
+  --color-dark: #4c1d95;
+
+  --text-title: #ffffff;
+  --text-body: #a1a1aa;
+  --text-muted: #71717a;
+
+  --border-color: #27272a;
+  --selection-bg: #8b5cf644;
+}

@@ -1,0 +1,19 @@
+body {
+    color: var(--text-body);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #fff;
+    font-family: Michroma;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--color-main), var(--color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}

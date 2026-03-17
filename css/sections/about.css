@@ -1,0 +1,56 @@
+#about {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .card-about {
+        padding: 1.8rem;
+        font-family: 'Lexend', sans-serif;
+        color: var(--text-body);
+        width: 60%;
+        min-height: auto;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        & p {
+            align-self: center;
+            text-align: justify;
+            width: 50%;
+        }
+
+        & .profile-pic {
+            position: relative;
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+            margin: 0 auto;
+
+            & img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                position: relative;
+                z-index: 2;
+                border: 5px transparent solid;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 302px;
+                width: 302px;
+                border-radius: 50%;
+                border: 5px var(--color-main) solid;
+                background-color: transparent;
+                z-index: 1;
+            }
+        }
+    }
+}

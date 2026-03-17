@@ -1,0 +1,20 @@
+@media (min-width: 1441px) {
+    body {
+        #home {
+            padding-left: 8%;
+
+            & h1 { font-size: 5rem; }
+            & p { font-size: 2.5rem; }
+        }
+
+        #about .card-about {
+            width: 50%;
+            max-width: 900px;
+        }
+
+        #projects .container-projects {
+            width: 70%;
+            max-width: 1200px;
+        }
+    }
+}

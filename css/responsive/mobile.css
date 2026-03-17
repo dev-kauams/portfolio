@@ -1,0 +1,198 @@
+@media (max-width: 480px) {
+    body {
+        & header {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding: 8px 10px;
+            gap: 6px;
+
+            & .nav-sections {
+                opacity: 1;
+                width: 95%;
+                height: 40px;
+
+                & a {
+                    font-size: 8px;
+                    padding: 0 0.6rem;
+                    width: auto;
+                    flex: 1;
+                }
+
+                & .selection-bar {
+                   
+                }
+            }
+
+            & .nav-themes {
+                position: static;
+                justify-self: center;
+                height: 36px;
+                border-width: 0.5px;
+                opacity: 0.4;
+
+                
+            }
+        }
+
+        #home {
+            padding: 18dvh 1.5rem 2rem;
+            align-items: center;
+            text-align: center;
+
+            & h1 {
+                font-size: clamp(1.6rem, 8vw, 2.2rem);
+                line-height: 1.2;
+            }
+
+            & p {
+                font-size: clamp(0.75rem, 4vw, 1rem);
+                margin-bottom: 1.2rem;
+            }
+
+            & .cv-button {
+                width: 160px;
+                font-size: 0.9rem;
+                padding: 1rem 0;
+            }
+        }
+
+        #about {
+            height: auto;
+            min-height: 100dvh;
+            padding: 14dvh 1rem 2rem;
+
+            & h2 { font-size: 1.4rem; }
+
+            & .card-about {
+                flex-direction: column-reverse;
+                width: 95%;
+                padding: 1.2rem;
+                gap: 1.2rem;
+
+                & p {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 0.85rem;
+                    line-height: 1.6;
+                }
+
+                & .profile-pic {
+                    height: 160px;
+                    width: 160px;
+
+                    &::before {
+                        height: 162px;
+                        width: 162px;
+                    }
+                }
+            }
+        }
+
+        #skills {
+            height: auto;
+            min-height: 100dvh;
+            padding: 4rem 1rem;
+
+            & h2 { font-size: 1.4rem; }
+            & h3 { font-size: 16px; }
+
+            & .card-grid {
+                grid-auto-flow: row;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                width: 100%;
+
+                & .card-skills {
+                    height: 110px;
+                    width: 100%;
+
+                    & .icon-skill {
+                        height: 55px;
+                    }
+                }
+            }
+        }
+
+        #projects {
+            height: auto;
+            min-height: auto;
+            padding: 4rem 1rem;
+
+            & h2 { font-size: 1.4rem; }
+
+            & .container-projects {
+                grid-template-columns: 1fr;
+                width: 95%;
+                gap: 16px;
+
+                & .card-projects {
+                    min-height: 280px;
+
+                    & img { height: 45%; }
+                    & h3 { font-size: 0.95rem; }
+                    & p { font-size: 0.8rem; }
+                    & button { font-size: 0.85rem; }
+                }
+            }
+        }
+
+        #contact {
+            padding: 3rem 1rem;
+            gap: 2rem;
+
+            & h2 { font-size: 1.4rem; }
+
+            & .container-contact {
+                width: 95%;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            & .card-contact {
+                padding: 1.5rem 1rem;
+                width: 100%;
+
+                & .img-contact {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                & a { font-size: 0.9rem; }
+            }
+        }
+
+        & footer {
+            height: auto;
+            min-height: auto;
+            padding: 3rem 5%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+
+            & .footer-container {
+                width: 100%;
+                gap: 1rem;
+
+                & h2 { font-size: 1.4rem; }
+                & p { font-size: 0.85rem; }
+
+                & .footer-form {
+                    gap: 0.8rem;
+
+                    & .input-group {
+                        & input,
+                        & textarea {
+                            padding: 0.75rem 0.9rem;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    & button {
+                        padding: 0.8rem;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}

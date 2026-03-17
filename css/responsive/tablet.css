@@ -1,0 +1,92 @@
+@media (max-width: 1024px) and (min-width: 481px) {
+    body {
+        & header {
+            height: 12dvh;
+            padding: 0 15px;
+
+            & .nav-sections {
+                opacity: 0.6;
+                max-height: 10dvh;
+
+                & a {
+                    font-size: 9px;
+                    padding: 0 0.8rem;
+                }
+            }
+
+            /* & .nav-themes { height: 55%; } */
+        }
+
+        #home {
+            padding: 12dvh 2rem 2rem;
+            & h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+            & p { font-size: clamp(1.2rem, 3vw, 1.8rem); }
+            & .cv-button { width: 180px; font-size: 18px; }
+        }
+
+        #about {
+            height: auto;
+            min-height: 100dvh;
+
+            & .card-about {
+                flex-direction: row;
+                width: 85%;
+                gap: 1.5rem;
+
+                & p { width: 55%; font-size: 0.95rem; }
+
+                & .profile-pic {
+                    height: 220px;
+                    width: 220px;
+
+                    &::before {
+                        height: 222px;
+                        width: 222px;
+                    }
+                }
+            }
+        }
+
+        #skills {
+            height: auto;
+            min-height: 100dvh;
+            padding: 4rem 2rem;
+
+            & .card-grid {
+                grid-auto-flow: row;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                width: 90%;
+
+                & .card-skills {
+                    height: 120px;
+                    width: 100%;
+                }
+            }
+        }
+
+        #projects {
+            height: auto;
+            min-height: 100dvh;
+            padding: 4rem 2rem;
+
+            & .container-projects {
+                width: 90%;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+        }
+
+        #contact {
+            & .container-contact {
+                width: 90%;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+        & footer {
+            height: auto;
+            min-height: 60dvh;
+
+            & .footer-container { width: min(500px, 90%); }
+        }
+    }
+}

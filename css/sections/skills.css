@@ -1,0 +1,90 @@
+#skills {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    & h3 {
+        font-size: 20px;
+    }
+
+    & .card-grid {
+        display: grid;
+        gap: 20px;
+        grid-auto-flow: column;
+        justify-content: center;
+        margin: 0 auto;
+
+        & .card-skills {
+            height: 150px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease;
+
+            &:hover {
+                transform: scale(1.03);
+
+                & .icon-skill {
+                    background-color: var(--color-main);
+                }
+            }
+        }
+
+        & .icon-skill {
+            width: 50%;
+            height: 75px;
+            background-color: #fff;
+            transition: background-color 0.2s ease;
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+        }
+
+        & .icon-html {
+            mask-image: url('../../assets/icons/skills/html-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/html-icon.svg');
+        }
+
+        & .icon-css {
+            mask-image: url('../../assets/icons/skills/css-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/css-icon.svg');
+        }
+
+        & .icon-js {
+            mask-image: url('../../assets/icons/skills/js-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/js-icon.svg');
+            border-radius: 10px;
+        }
+
+        & .icon-react {
+            mask-image: url('../../assets/icons/skills/react-js-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/react-js-icon.svg');
+        }
+
+        & .icon-sql {
+            mask-image: url('../../assets/icons/skills/sql-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/sql-icon.svg');
+        }
+
+        & .icon-vs-code {
+            mask-image: url('../../assets/icons/skills/vs-code-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/vs-code-icon.svg');
+        }
+
+        & .icon-github {
+            mask-image: url('../../assets/icons/skills/github-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/github-icon.svg');
+        }
+
+        & .icon-figma {
+            mask-image: url('../../assets/icons/skills/figma-icon.svg');
+            -webkit-mask-image: url('../../assets/icons/skills/figma-icon.svg');
+        }
+    }
+}
